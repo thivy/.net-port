@@ -35,6 +35,8 @@ Note that the intent of this application is to provide mainframe coding scenario
 3. VSAM
 4. JCL
 5. RACF
+6. ASP.NET 8
+7. ASP.NET Aspire
 
 <br/>
 
@@ -57,6 +59,7 @@ To install this repository on the mainframe please follow the following steps
       | AWS.M2 | CARDDEMO.CBL  | FB     |     80 |
       | AWS.M2 | CARDDEMO.CPY  | FB     |     80 |
       | AWS.M2 | CARDDEMO.BMS  | FB     |     80 |
+      | AWS.M2 | CARDDEMO.ASPNET | FB     |     80 |
       
 3. Use data for testing using either of the below approaches
 
@@ -321,4 +324,37 @@ Watch this space for updates
 
 <br/>
 
+## ASP.NET 8 Modernization
+
+The CardDemo application has been modernized to use ASP.NET 8 with the latest ASP.NET Aspire features. The new structure includes ASP.NET 8 projects, controllers, models, and views.
+
+### ASP.NET 8 Project Structure
+
+The ASP.NET 8 project structure is as follows:
+
+- `app/aspnet/CardDemo/CardDemo.csproj`: ASP.NET 8 project file
+- `app/aspnet/CardDemo/Controllers/AccountController.cs`: Controller for account-related actions
+- `app/aspnet/CardDemo/Controllers/CardController.cs`: Controller for card-related actions
+- `app/aspnet/CardDemo/Controllers/TransactionController.cs`: Controller for transaction-related actions
+- `app/aspnet/CardDemo/Models/Account.cs`: Model for account data
+- `app/aspnet/CardDemo/Models/Card.cs`: Model for card data
+- `app/aspnet/CardDemo/Models/Transaction.cs`: Model for transaction data
+- `app/aspnet/CardDemo/Views/Account/Index.cshtml`: View for displaying account information
+- `app/aspnet/CardDemo/Views/Card/Index.cshtml`: View for displaying card information
+- `app/aspnet/CardDemo/Views/Transaction/Index.cshtml`: View for displaying transaction information
+
+### Running the ASP.NET 8 Application
+
+To run the ASP.NET 8 application, follow these steps:
+
+1. Navigate to the `app/aspnet/CardDemo/` directory.
+2. Run the following command to build the project:
+   ```shell
+   dotnet build
+   ```
+3. Run the following command to start the application:
+   ```shell
+   dotnet run
+   ```
+4. Open a web browser and navigate to `http://localhost:5000` to access the CardDemo application.
 
