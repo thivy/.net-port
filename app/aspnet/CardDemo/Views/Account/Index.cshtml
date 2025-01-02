@@ -1,0 +1,27 @@
+@model IEnumerable<CardDemo.Models.Account>
+
+@{
+    ViewData["Title"] = "Account List";
+}
+
+<h1>Account List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+            <tr>
+                <td>@account.Id</td>
+                <td>@account.Name</td>
+                <td>@account.Balance</td>
+            </tr>
+        }
+    </tbody>
+</table>

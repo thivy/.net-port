@@ -1,0 +1,29 @@
+@model IEnumerable<CardDemo.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transaction List";
+}
+
+<h1>Transaction List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Account Id</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td>@transaction.Id</td>
+                <td>@transaction.AccountId</td>
+                <td>@transaction.Amount</td>
+                <td>@transaction.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>
